@@ -1,0 +1,285 @@
+/* global */
+.body {
+    background-color: #e5e5e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.global-cut-wrap {
+    margin: 0 auto;
+    max-width: 1920px;
+    overflow: hidden;
+}
+
+.global-wrap {
+    margin: 0 auto;
+    width: 1440px;
+    padding: 0 32px;
+}
+
+/* colors */
+.color-black {
+    color: #000f2d;
+}
+
+.color-blue {
+    color: #004ae2;
+}
+
+/* fonts */
+@font-face {
+    font-family: "BeVietnamPro-Regular";
+    src: url("./assets/fonts/BeVietnamPro-Regular.ttf");
+}
+
+@font-face {
+    font-family: "BeVietnamPro-Bold";
+    src: url("./assets/fonts/BeVietnamPro-Bold.ttf");
+}
+
+@font-face {
+    font-family: "HelveticaNeueMediumExtended";
+    src: url("./assets/fonts/HelveticaNeueMediumExtended.ttf");
+}
+
+.font-main {
+    font-family: "BeVietnamPro-Regular";
+}
+
+.font-main-bold {
+    font-family: "BeVietnamPro-Bold";
+}
+
+.font-head {
+    font-family: "HelveticaNeueMediumExtended";
+}
+
+/* header */
+.header {
+    margin: 32px 0 32px 0;
+    display: grid;
+    grid-template-columns: 15% 15% auto 10%;
+    align-items: center;
+}
+
+.nav {
+    width: 70%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav__item {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.basic-button {
+    color: #ffffff;
+    font-family: "BeVietnamPro-Regular";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+
+    background-color: #004ae2;
+    width: 129px;
+    height: 55px;
+    border: 0;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+/* intro section */
+.section {
+    position: relative;
+    margin: 100px 0;
+}
+
+.intro-section {
+    display: grid;
+    grid-template-columns: 565px auto;
+    column-gap: 40px;
+}
+
+.section-subheader {
+    font-weight: 800;
+    font-size: 74px;
+    line-height: 82px;
+    letter-spacing: -0.02em;
+}
+
+.section-text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+
+    margin-top: 40px;
+}
+
+.intro-search {
+    margin-top: 40px;
+
+    width: 450px;
+    height: 88px;
+
+    display: grid;
+    grid-template-columns: auto 88px;
+}
+
+.intro-search-text {
+    box-shadow: 10px 0px 100px rgba(0, 0, 0, 0.1);
+    border-radius: 6px 0 0 6px;
+    border: 0;
+
+    padding-left: 20px;
+}
+
+.intro-search-text::placeholder {
+    font-family: "BeVietnamPro-Regular";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #8cadf2;
+}
+
+.intro-search-button {
+    position: relative;
+
+    height: unset;
+    border-radius: 0 6px 6px 0;
+}
+
+.intro-search-button::after {
+    z-index: 100;
+    content: "";
+    height: 2px;
+    width: 39px;
+    background-color: #ffffff;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.intro-search-button::before {
+    z-index: 100;
+    content: "";
+    height: 15px;
+    width: 15px;
+    /* background-color: transparent; */
+
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    /* background-color: #ffffff; */
+
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 10px);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.intro-cards {
+    margin-top: 30px;
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 40px;
+}
+
+.intro-cards__item {
+    min-width: 197px;
+    height: 437px;
+    border-radius: 20px;
+
+    position: relative;
+    overflow: hidden;
+
+    background-color: #000000;
+}
+
+.intro-cards__item.active {
+    min-width: 474px;
+}
+
+.intro-card-image {
+    height: 437px;
+    opacity: 0.8;
+}
+
+.intro-card-text {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #ffffff;
+}
+
+.intro-cards__item.active .intro-card-text {
+    display: block;
+}
+
+/* statistic section */
+.stat {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.stat__item {
+    width: 326px;
+    height: 226px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-right: 1px solid #b3ccff;
+}
+
+.stat__item:last-child {
+    border-right: 0;
+}
+
+.stat__item-icon {
+    font-size: 50px;
+
+    margin-bottom: 10px;
+}
+
+.stat__item-number {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: -0.02em;
+
+    margin-bottom: 10px;
+}
+
+.stat__item-title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+}
+
+/* about us section */
+/* why choose us section */
+/* our project section */
+/* Our Property Section */
+/* our team section */
+/* our clients section */
+/* our blog section */
+/* contact us section */
+/* footer */
